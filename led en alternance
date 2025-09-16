@@ -1,0 +1,14 @@
+from time import sleep
+my_pin = pyb.Pin( 'X1', pyb.Pin.OUT_PP)
+my_pin2 = pyb.Pin( 'X2', pyb.Pin.OUT_PP)
+
+def blink():
+  my_pin.high()
+  sleep(1)
+  my_pin.low()
+  my_pin2.high()
+  sleep(1)
+  my_pin2.low()
+
+while True:
+  blink()
