@@ -1,0 +1,7 @@
+import tm1637
+
+display = tm1637.TM1637(clk=pyb.Pin('X7'), dio=pyb.Pin('X6'))
+
+for i in range (500,-100,-100):
+     display.number(i)
+     pyb.delay(1000)
